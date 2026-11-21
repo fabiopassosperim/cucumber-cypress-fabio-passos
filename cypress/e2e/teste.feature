@@ -1,21 +1,17 @@
 #language: pt
 
-Funcionalidade: Navegação no site Cucumber.io
-  Como um desenvolvedor interessado em BDD
-  Eu quero navegar pelo site oficial do Cucumber
-  Para que eu possa acessar a documentação e aprender sobre a ferramenta
+Funcionalidade: Administrar livros no Hub de leitura
+Como administrador do sistema, quero manter o catálogo de livros atualizado.
 
-@documentação
-Cenário: Visitar a página inicial do Cucumber.io
-  Dado que acesso o site do Cucumber.io
-  Quando clicar no link Documentation
-  Então deve exibir o título Introduction na página
+Cenário: Adicionar um novo livro
+  Dado que estou logado como administrador
+  Quando adiciono um novo livro com os dados obrigatórios
+  Então deve aparecer uma mensagem de sucesso: "Livro adicionado com sucesso!"
 
-@learn
-Cenário: Acessar a seção de Aprendizado
-  Dado que acesso o site do Cucumber.io
-  Quando clicar no link Learn
-  Então deve exibir o título Learn na página
+Cenário: Fazer login com email inválido
+  Dado que estou na página de login
+  Quando tento fazer login com um email inválido
+  Então deve aparecer uma mensagem de validação: "Por favor, insira um email válido."
 
   
 
